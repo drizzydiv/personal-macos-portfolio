@@ -3,7 +3,7 @@
 
 A personal portfolio that masquerades as a macOS desktop. Instead of a single-page site with a hero and cards, the entire experience is an interactive OS: lock screen, desktop, dock, windows, widgets, and a fake terminal — all built in React, TypeScript, and Motion.
 
-## 🚀 [Live Demo](https://made-human-51828862.figma.site/)
+## 🚀 [Click Here for Live Demo](https://made-human-51828862.figma.site/)
 
 Best experienced on a modern desktop browser (Chrome or Safari). Mobile is supported but some interactions are tuned for pointer + keyboard.
 
