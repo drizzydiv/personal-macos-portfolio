@@ -1,0 +1,11 @@
+/* SF Pro is served natively via -apple-system on Apple devices.
+   For all other platforms we pull in Inter Tight as the closest geometric-humanist match. */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400&display=swap');
+
+/* Make the system font stack available everywhere */
+:root {
+  --font-sf: -apple-system, "SF Pro Display", BlinkMacSystemFont, "Helvetica Neue",
+    "Inter Tight", Arial, sans-serif;
+  --font-sf-text: -apple-system, "SF Pro Text", BlinkMacSystemFont, "Helvetica Neue",
+    "Inter Tight", Arial, sans-serif;
+}

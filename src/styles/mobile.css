@@ -1,0 +1,474 @@
+/* Mobile-specific optimizations for the macOS portfolio */
+/* Only applies to screens smaller than 768px */
+
+/* ── Video Controls Hiding (ALL DEVICES) ───────────────────────────── */
+/* Hide default video controls and play buttons */
+video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
+
+video {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Disable the play button overlay on mobile */
+video::cue {
+  background: transparent !important;
+}
+
+@media (max-width: 767px) {
+  /* ── Lock Screen Mobile Optimizations ──────────────────────────────── */
+  
+  /* Reduce time size for mobile */
+  .mobile-lock-time {
+    font-size: clamp(80px, 18vw, 140px) !important;
+  }
+  
+  .mobile-lock-date {
+    font-size: clamp(13px, 3.5vw, 16px) !important;
+    padding-left: clamp(20px, 4vw, 32px) !important;
+    padding-top: clamp(24px, 4vh, 48px) !important;
+  }
+  
+  .mobile-lock-unlock-hint {
+    padding-bottom: clamp(24px, 5vh, 48px) !important;
+    font-size: 10px !important;
+  }
+
+  /* ── Menu Bar Mobile ───────────────────────────────────────────────── */
+  
+  .mobile-menu-bar {
+    height: 40px !important;
+    padding: 0 12px !important;
+  }
+  
+  /* Hide non-essential menu items on mobile */
+  .mobile-menu-hide {
+    display: none !important;
+  }
+  
+  .mobile-menu-item {
+    font-size: 11px !important;
+    padding: 4px 6px !important;
+  }
+  
+  .mobile-menu-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  .mobile-menu-time {
+    font-size: 10px !important;
+    padding: 4px 8px !important;
+  }
+
+  /* ── Dock Mobile ───────────────────────────────────────────────────── */
+  
+  .mobile-dock-container {
+    bottom: 8px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 16px) !important;
+    max-width: 420px !important;
+  }
+  
+  .mobile-dock-tray {
+    padding: 6px 8px !important;
+    border-radius: 18px !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  
+  .mobile-dock-tray::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .mobile-dock-icon {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 12px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .mobile-dock-separator {
+    height: 32px !important;
+    margin: 0 4px !important;
+  }
+
+  /* ── Widgets Mobile ────────────────────────────────────────────────── */
+  
+  .mobile-widgets-container {
+    top: 48px !important;
+    left: 8px !important;
+    right: 8px !important;
+    padding-top: 8px !important;
+    gap: 8px !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    pointer-events: none !important;
+  }
+  
+  .mobile-widget {
+    width: calc(50% - 4px) !important;
+    max-width: 160px !important;
+    pointer-events: all !important;
+  }
+  
+  .mobile-widget-full {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .mobile-music-widget-art {
+    height: 90px !important;
+  }
+  
+  .mobile-calendar-day {
+    font-size: 42px !important;
+  }
+  
+  /* Hide status widget on very small screens */
+  @media (max-width: 380px) {
+    .mobile-status-widget {
+      display: none !important;
+    }
+  }
+
+  /* ── Desktop Folders Mobile ────────────────────────────────────────── */
+  
+  .mobile-folder {
+    position: fixed !important;
+    width: 64px !important;
+  }
+  
+  .mobile-folder:nth-child(1) {
+    right: 16px !important;
+    top: 100px !important;
+    left: auto !important;
+  }
+  
+  .mobile-folder:nth-child(2) {
+    right: 16px !important;
+    top: 190px !important;
+    left: auto !important;
+  }
+  
+  .mobile-folder:nth-child(3) {
+    right: 16px !important;
+    top: 280px !important;
+    left: auto !important;
+  }
+  
+  .mobile-folder-icon {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 8px !important;
+  }
+  
+  .mobile-folder-icon-inner {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  
+  .mobile-folder-label {
+    font-size: 10px !important;
+    max-width: 70px !important;
+    padding: 1px 4px !important;
+  }
+
+  /* ── Desktop Hint Mobile ───────────────────────────────────────────── */
+  
+  .mobile-desktop-hint {
+    bottom: 80px !important;
+    font-size: 11px !important;
+    padding: 0 16px !important;
+  }
+  
+  .mobile-desktop-hint-code {
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+  }
+
+  /* ── Window Mobile ─────────────────────────────────────────────────── */
+  
+  .mobile-window {
+    inset: 8px 8px 80px 8px !important;
+    border-radius: 12px !important;
+  }
+  
+  .mobile-window-titlebar {
+    height: 44px !important;
+    padding: 0 12px !important;
+  }
+  
+  .mobile-window-title {
+    font-size: 12px !important;
+  }
+  
+  .mobile-window-traffic-light {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  
+  .mobile-window-content {
+    padding: 16px !important;
+  }
+
+  /* ── Window Content Components Mobile ──────────────────────────────── */
+  
+  .mobile-content-padding {
+    padding: 16px !important;
+  }
+  
+  .mobile-content-max-width {
+    max-width: 100% !important;
+  }
+  
+  .mobile-profile-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+  
+  .mobile-profile-avatar {
+    width: 80px !important;
+    height: 80px !important;
+    font-size: 32px !important;
+  }
+  
+  .mobile-profile-title {
+    font-size: 24px !important;
+  }
+  
+  .mobile-profile-subtitle {
+    font-size: 16px !important;
+  }
+  
+  .mobile-grid-cols-1 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .mobile-text-sm {
+    font-size: 13px !important;
+  }
+  
+  .mobile-text-xs {
+    font-size: 11px !important;
+  }
+  
+  .mobile-padding-sm {
+    padding: 12px !important;
+  }
+  
+  .mobile-gap-sm {
+    gap: 12px !important;
+  }
+  
+  .mobile-margin-sm {
+    margin-bottom: 12px !important;
+  }
+
+  /* ── Contact Form Mobile ───────────────────────────────────────────── */
+  
+  .mobile-contact-input {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+  }
+  
+  .mobile-contact-button {
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  /* ── Project Cards Mobile ──────────────────────────────────────────── */
+  
+  .mobile-project-card {
+    padding: 16px !important;
+  }
+  
+  .mobile-project-title {
+    font-size: 16px !important;
+  }
+  
+  .mobile-project-description {
+    font-size: 13px !important;
+  }
+  
+  .mobile-tech-tag {
+    font-size: 10px !important;
+    padding: 4px 8px !important;
+  }
+
+  /* ── Skills Component Mobile ───────────────────────────────────────── */
+  
+  .mobile-skill-name {
+    font-size: 13px !important;
+  }
+  
+  .mobile-skill-percentage {
+    font-size: 12px !important;
+  }
+
+  /* ── Film Roll Photos Mobile ───────────────────────────────────────── */
+  
+  .mobile-film-roll-image {
+    height: 200px !important;
+  }
+
+  /* ── Terminal Mobile ───────────────────────────────────────────────── */
+  
+  .mobile-terminal-text {
+    font-size: 12px !important;
+  }
+  
+  .mobile-terminal-input {
+    font-size: 12px !important;
+  }
+
+  /* ── Divik Profile Mobile ──────────────────────────────────────────── */
+  
+  .mobile-profile-boot-text {
+    font-size: 11px !important;
+  }
+  
+  .mobile-profile-section {
+    padding: 16px !important;
+  }
+
+  /* ── Touch Optimizations ───────────────────────────────────────────── */
+  
+  /* Increase touch target sizes */
+  .mobile-touch-target {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  
+  /* Prevent text selection on touch */
+  .mobile-no-select {
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
+  
+  /* Smooth scrolling */
+  .mobile-smooth-scroll {
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* ── General Mobile Layout ─────────────────────────────────────────── */
+  
+  /* Reduce overall padding and margins */
+  .mobile-compact {
+    padding: 12px !important;
+    margin: 8px !important;
+  }
+  
+  /* Full width containers on mobile */
+  .mobile-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Vertical stacking */
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+  
+  /* Hide on mobile */
+  .mobile-hide {
+    display: none !important;
+  }
+  
+  /* Show only on mobile */
+  .desktop-hide {
+    display: block !important;
+  }
+
+  /* ── Animation Performance ─────────────────────────────────────────── */
+  
+  /* Reduce animation complexity on mobile for better performance */
+  @media (prefers-reduced-motion: no-preference) {
+    .mobile-reduce-motion * {
+      animation-duration: 0.4s !important;
+      transition-duration: 0.2s !important;
+    }
+  }
+
+  /* ── Responsive Typography ─────────────────────────────────────────── */
+  
+  .mobile-heading-1 {
+    font-size: clamp(24px, 6vw, 32px) !important;
+  }
+  
+  .mobile-heading-2 {
+    font-size: clamp(20px, 5vw, 28px) !important;
+  }
+  
+  .mobile-heading-3 {
+    font-size: clamp(18px, 4.5vw, 24px) !important;
+  }
+  
+  .mobile-body {
+    font-size: clamp(14px, 3.5vw, 16px) !important;
+  }
+  
+  .mobile-caption {
+    font-size: clamp(11px, 3vw, 13px) !important;
+  }
+}
+
+/* ── Tablet/Medium screens (768px - 1023px) ────────────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tablet-dock-icon {
+    width: 52px !important;
+    height: 52px !important;
+  }
+  
+  .tablet-window {
+    inset: 32px 40px 96px 40px !important;
+  }
+  
+  .tablet-widget {
+    width: 180px !important;
+  }
+}
+
+/* ── Very small mobile screens (max 380px) ─────────────────────────── */
+@media (max-width: 380px) {
+  .mobile-dock-icon {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  
+  .mobile-widget {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .mobile-lock-time {
+    font-size: clamp(70px, 20vw, 110px) !important;
+  }
+}
