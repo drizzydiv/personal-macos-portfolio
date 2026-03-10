@@ -3,9 +3,7 @@
 
 A personal portfolio that masquerades as a macOS desktop. Instead of a single-page site with a hero and cards, the entire experience is an interactive OS: lock screen, desktop, dock, windows, widgets, and a fake terminal — all built in React, TypeScript, and Motion.
 
-## Live Demo
-
-> https://your-demo-url.com
+## 🚀 [Live Demo](https://made-human-51828862.figma.site/)
 
 Best experienced on a modern desktop browser (Chrome or Safari). Mobile is supported but some interactions are tuned for pointer + keyboard.
 
@@ -87,10 +85,6 @@ Overall, this was a slightly long, but fun learning experience. C:
 - React Router – https://reactrouter.com/
 - Lucide React – https://lucide.dev/
 
-## Getting Started
+---
 
-```bash
-git clone https://github.com/your-username/macos-portfolio.git
-cd macos-portfolio
-npm install
-npm run dev
+<small><em>thanks for reading<em><small>
