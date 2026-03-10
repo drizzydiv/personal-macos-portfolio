@@ -1,4 +1,5 @@
 # macOS-Inspired Portfolio
+<small><em>Album artwork belongs to their respective rights holders and is used only for personal/portfolio demonstration.</em></small>
 
 A personal portfolio that masquerades as a macOS desktop. Instead of a single-page site with a hero and cards, the entire experience is an interactive OS: lock screen, desktop, dock, windows, widgets, and a fake terminal — all built in React, TypeScript, and Motion.
 
@@ -37,6 +38,54 @@ Best experienced on a modern desktop browser (Chrome or Safari). Mobile is suppo
 - **Routing:** React Router v7  
 
 ---
+
+## Tutorials and References
+
+These are the main tutorials and resources I went to when I wasn't relying on AI tools.
+
+- macOS UI & Dock Physics
+  - macOS dock magnification with Framer Motion concepts – search: "macOS Dock animation with Framer Motion buildui" on YouTube.
+  - Framer Motion full course by Codevolution:
+      - https://www.youtube.com/watch?v=znbCa4Rr054
+- Glassmorphism / Liquid Glass UI
+  - “Glassmorphism UI Design in CSS” by Kevin Powell
+  - “Frosted Glass Effect with CSS” by Fireship
+- Canvas Animations
+  - “HTML Canvas Particle Animation” by The Coding Train (Daniel Shiffman):
+      - https://www.youtube.com/c/TheCodingTrain
+  - Multi-layer sine wave ocean techniques on YouTube. (Also used tons of Desmos for this kill me)
+  - HTML5 Canvas Tutorial for Beginners - https://www.youtube.com/watch?v=EO6OkltgudE
+- Terminal UI in React
+    - Fireship + Jack Harrington's videos on "Building terminals in React"
+
+Overall, this was a slightly long, but fun learning experience. C:
+
+---
+
+## Notes
+
+- This is a personal, non-commercial project that visually references Apple’s macOS design language. It is not affiliated with or endorsed by Apple.
+- The contact UI is front-end only; no data is stored or transmitted.
+- Some media (e.g., ocean video, album artwork) is used under the respective providers’ terms and is not included for commercial reuse.
+
+---
+
+## Credits
+
+- Built by: Divik Srivastava
+- Design Inspo: macOS Monterey / Ventura / Sequoia by Apple Inc. (fan/educational recreation, not affiliated with Apple).
+- “Hollow Purple” animation inspired by the technique from Jujutsu Kaisen by Gege Akutami. (chat is this a niche reference)
+
+---
+
+## Libraries
+
+- Motion – https://motion.dev/
+- Tailwind CSS – https://tailwindcss.com/
+- Radix UI – https://radix-ui.com/
+- Vite – https://vitejs.dev/
+- React Router – https://reactrouter.com/
+- Lucide React – https://lucide.dev/
 
 ## Getting Started
 
